@@ -1,4 +1,4 @@
-package cof.gof.dagger2structure.activities;
+package cof.gof.dagger2structure.secondaryActivity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +10,9 @@ import cof.gof.dagger2structure.R;
 import cof.gof.dagger2structure.shared.Flumbolator;
 import dagger.android.AndroidInjection;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondaryActivity extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getCanonicalName();
+    private static final String TAG = SecondaryActivity.class.getCanonicalName();
     @Inject
     Flumbolator flumbolator;
 
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_secondary);
 
-        Log.d(TAG, "flumbolate " + flumbolator.frumbolateMe());
+        Log.d(TAG, flumbolator.frumbolateMe());
     }
 }
