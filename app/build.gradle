@@ -18,6 +18,7 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -39,5 +40,13 @@ dependencies {
     compile "com.google.dagger:dagger-android-support:$DAGGER_VERSION"
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile "org.projectlombok:lombok:1.16.10"
+    compile 'org.mockito:mockito-core:2.7.12'
+
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
     testCompile 'junit:junit:4.12'
+    testCompile "org.robolectric:robolectric:3.2.2"
+    testCompile "com.google.dagger:dagger:$DAGGER_VERSION"
+
 }
