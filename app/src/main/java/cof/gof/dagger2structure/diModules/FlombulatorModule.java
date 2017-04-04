@@ -9,6 +9,7 @@ public class FlombulatorModule {
 
     @Provides
     Flumbolator provideFlumBolator() {
+        System.out.println("I'm the mighty real implementation, give me a break");
         return new Flumbolator();
     }
 }

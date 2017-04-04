@@ -1,4 +1,4 @@
-package cof.gof.dagger2structure.diModules;
+package cof.gof.dagger2structure.testModules;
 
 import org.mockito.Mockito;
 
@@ -13,8 +13,9 @@ public class FlombulatorTestModule {
 
     @Provides
     Flumbolator provideTestFlombulator() {
+        System.out.println("I the mocked flumbolator have been summoned, behold my mock power");
         Flumbolator flum = Mockito.mock(Flumbolator.class);
-        when(flum.frumbolateMe()).thenReturn("Flumbolated test");
+        when(flum.frumbolateMe()).thenReturn("flumbolate test");
         return flum;
     }
 }

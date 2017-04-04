@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
 import javax.inject.Inject;
@@ -18,6 +17,7 @@ import dagger.android.AndroidInjection;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getCanonicalName();
+
     @Inject
     Flumbolator flumbolator;
 
@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(secondary);
             }
         });
+    }
 
-        Log.d(TAG, "flumbolate " + flumbolator.frumbolateMe());
+    public String flumbolate() {
+        return flumbolator.frumbolateMe();
     }
 }
