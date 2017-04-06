@@ -10,6 +10,7 @@ import javax.inject.Inject;
 
 import cof.gof.dagger2structure.R;
 import cof.gof.dagger2structure.databinding.ActivityMainBinding;
+import cof.gof.dagger2structure.models.Pojo;
 import cof.gof.dagger2structure.secondaryActivity.SecondaryActivity;
 import cof.gof.dagger2structure.shared.Flumbolator;
 import dagger.android.AndroidInjection;
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        Pojo pojo = new Pojo("test");
+        pojo.getName();
 
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
