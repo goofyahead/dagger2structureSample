@@ -28,7 +28,8 @@ android {
 }
 
 dependencies {
-    compile "org.projectlombok:lombok:1.16.10"
+    provided "org.projectlombok:lombok:1.16.10"
+    provided 'javax.annotation:jsr250-api:1.0'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
