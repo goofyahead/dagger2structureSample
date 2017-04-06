@@ -25,7 +25,6 @@ public class TestMainActivity {
     @Test
     public void addition_isCorrect() throws Exception {
         mainActivity = Robolectric.buildActivity(MainActivity.class).create().visible().get();
-
         assertEquals("flumbolate test", mainActivity.flumbolate());
     }
 

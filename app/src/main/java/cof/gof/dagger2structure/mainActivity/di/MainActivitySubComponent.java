@@ -10,6 +10,7 @@ import dagger.android.AndroidInjector;
         FlombulatorModule.class,
         MainActivitySubComponent.MainActivityModule.class
 })
+
 public interface MainActivitySubComponent extends AndroidInjector<MainActivity> {
 
     @Module
